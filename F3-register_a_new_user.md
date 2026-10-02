@@ -20,7 +20,7 @@
 
 ## 1. Problem Statement
 
-2–4 sentences. *What is missing today, who is hurt by the gap, and what business outcome does fixing it create?*
+User should be able to create a new account. Without this feature, no users will be able to properly use the application in its intended fashion. Implementing this feature will allow users to interact with content.
 
 ## 2. Goals
 
