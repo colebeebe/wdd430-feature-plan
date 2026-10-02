@@ -11,7 +11,7 @@
 | **Severity** | BLOCKER \| MAJOR \| MINOR |
 | **Markets** | General Web Audience |
 | **Status (today)** | MISSING |
-| **Estimated effort** | XS (≤1d) \| S (1w) \| M (2–4w) \| L (1–2mo) \| XL (>2mo) |
+| **Estimated effort** | S (1w) |
 | **Owner (proposed)** | {team / individual} |
 | **Depends on** | {list of Feature IDs that must ship first} |
 | **Unblocks** | {list of Feature IDs this enables} |

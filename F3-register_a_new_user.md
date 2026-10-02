@@ -149,7 +149,9 @@ Users need a way to create accounts and authenticate themselves before accessing
 
 | Risk | Likelihood | Impact | Mitigation |
 |---|---|---|---|
-| … | L/M/H | L/M/H | … |
+| Plain text passwords are accidentally stored or logged | L | H | Hash passwords before persistence |
+| Duplicate accounts are created during concurrent registrations | M | M | Normalize email consistency and enforce uniqueness |
+| Login endpoints are abused for credential guessing | M | H | Apply configurable rate limits, monitor repeated failures, and avoid account-enumeration details |
 
 ## 15. Rollout Plan
 
