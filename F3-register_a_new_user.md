@@ -64,7 +64,7 @@ User should be able to create a new account. Without this feature, no users will
 - **Accessibility** — The registration interface MUST conform to WCAG 2.1 AA requirements, including keyboard navigation, accessible form lables, sufficient color contrast, and clear error messages.
 - **Scalability** — The registration SHOULD support the expected user fields without requiring changes to database model.
 - **Reliability** — A failed registration attempt MUST NOT create a partial or invalid user account.
-- **Observability** — Registration failures SHOULD be logged with enough information to diagnose problems.
+- **Observability** — Registration failures SHOULD be logged with enough information to diagnose problems, but logs MUST NOT contain passwords or other sensitive information.
 - **Maintainability** — coding conventions, owned modules.
 - **Internationalization** — strings externalised, tz/locale handled.
 - **Backward compatibility** — migration & deprecation policy.
