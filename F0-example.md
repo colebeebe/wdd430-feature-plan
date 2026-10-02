@@ -89,9 +89,7 @@ Concrete, testable, Given/When/Then format. Each AC SHOULD map to at least one a
 
 ## 11. AI / ML Considerations
 
-(Skip if not AI-touching.)
-
-- Model(s) used, prompts, eval metric, fallback path, PII redaction, cost budget.
+- N/A; No AI/ML in project
 
 ## 12. Integration Points
 

@@ -101,9 +101,7 @@ Authentication is required before users can interact with content. Without authe
 ## 12. Integration Points
 
 - **F1.** Set Up User Database/Model
-- **F3.** Register a New User
-- **F4.** Log In as a Registered User
-- **F5.** Log Out of an Account
+- **F3.** Register New Users and Log In/Out
 
 ## 13. Dependencies & Sequencing
 
@@ -153,6 +151,4 @@ Authentication is required before users can interact with content. Without authe
 ## 19. References
 
 - Related plans: `F1-set_up_user_database_model.md`
-- Related plans: `F3-register_a_new_user.md`
-- Related plans: `F4-log_in_as_a_registered_user.md`
-- Related plans: `F5-log_out_of_an_account.md`
+- Related plans: `F3-register_new_users_and_log_in_out.md`

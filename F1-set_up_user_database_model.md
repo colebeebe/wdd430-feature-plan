@@ -107,24 +107,11 @@ A database must be present to hold user data. This is necessary so that differen
 
 - Must ship before:
   - **F2.** Set Up Authentication Infrastructure
-  - **F3.** Register a New User
-  - **F4.** Log In as a Registered User
-  - **F5.** Log Out of an Account
-  - **F7.** Edit Your Own User Profile
-  - **F8.** Assign User Roles
-  - **F9.** Display a Verified User Designation on Profiles/Reviews
-  - **F15.** Allow Users to Create a Game Rating From 0-5 Stars
-  - **F16.** Allow Users to Write a Text Review
-  - **F17.** Allow users to Edit Their Own Reviews
-  - **F18.** Allow users to Delete Their Own Reviews
-  - **F19.** Display the Reviewer's Account Type on Reviews
-  - **F25.** Create Games as an Administrator
-  - **F26.** Edit Games as an Administrator
-  - **F27.** Delete Games as an Administrator
-  - **F28.** View a List of Users as an Administrator
-  - **F29.** Change a User's Role as an Aministrator
-  - **F30.** Grant or Remove Verified Status as an Administrator
-  - **F31.** Moderate/Delete User Reviews as an Administrator
+  - **F3.** Register New Users and Log In/Out
+  - **F7.** Allow Users to Create, Edit, and Delete Their Own Reviews
+  - **F10.** Create, Edit, Delete Games as an Administrator
+  - **F11.** View a List of Users and Edit Roles as an Administrator
+  - **F12.** Moderate/Delete User Reviews as an Administrator
 
 ## 14. Risks & Mitigations
 
@@ -164,21 +151,8 @@ A database must be present to hold user data. This is necessary so that differen
 ## 19. References
 
 - Related plans: `F2-set_up_authentication_infrastructure.md`
-- Related plans: `F3-register_a_new_user.md`
-- Related plans: `F4-log_in_as_a_registered_user.md`
-- Related plans: `F5-log_out_of_an_account.md`
-- Related plans: `F7-edit_your_own_user_profile.md`
-- Related plans: `F8-assign_user_roles.md`
-- Related plans: `F9-display_a_verified_user_designation_on_profiles/reviews.md`
-- Related plans: `F15-allow_users_to_create_a_game_rating_from_0-5_stars.md`
-- Related plans: `F16-allow_users_to_write_a_text_review.md`
-- Related plans: `F17-allow_users_to_edit_their_own_reviews.md`
-- Related plans: `F18-allow_users_to_delete_their_own_reviews.md`
-- Related plans: `F19-display_the_reviewer's_account_type_on_reviews.md`
-- Related plans: `F25-create_games_as_an_administrator.md`
-- Related plans: `F26-edit_games_as_an_administrator.md`
-- Related plans: `F27-delete_games_as_an_administrator.md`
-- Related plans: `F28-view_a_list_of_users_as_an_administrator.md`
-- Related plans: `F29-change_a_user's_role_as_an_aministrator.md`
-- Related plans: `F30-grant_or_remove_verified_status_as_an_administrator.md`
-- Related plans: `F31-moderate/delete_user_reviews_as_an_administrator.md`
+- Related plans: `F3-register_new_users_and_log_in_out.md`
+- Related plans: `F7-allow_users_to_create_edit_and_delete_their_own_reviews.md`
+- Related plans: `F1-create_edit_delete_games_as_an_administrator.md`
+- Related plans: `F1-view_a_list_of_users_and_edit_roles_as_an_administrator.md`
+- Related plans: `F1-moderate_delete_user_reviews_as_an_administrator.md`
