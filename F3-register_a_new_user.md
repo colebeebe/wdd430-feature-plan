@@ -24,34 +24,47 @@ User should be able to create a new account. Without this feature, no users will
 
 ## 2. Goals
 
-- Bullet list of 3–5 outcomes the work must achieve.
+- Allow users to create a new account using valid email address and password
+- Validate registration information before creating the account
+- Create account with General User role
+- Provide feedback on successful and failed login
 
 ## 3. Non-Goals
 
-- Explicit out-of-scope items so reviewers do not chase scope creep.
+- Password reset or account recovery functionality
+- User login and authentication
+- Editing an existing user's profile information
 
 ## 4. Personas & User Stories
 
-- **As a {role}**, I want to {action} so that {value}.
-- Cover student, instructor, admin, parent (where relevant), and self-learner perspectives.
+- As a new user, I want to be able to create an account with an email address and password
+- As an admin, I want all new users to be automatically assigned to the General Users role
 
 ## 5. Functional Requirements
 
-Numbered, testable, written in MUST / SHOULD / MAY (RFC 2119) form.
+- **FR-1.** The system MUST provide a registration mechanism that allows a prospective user to create an account.
+- **FR-2.** The system MUST require a valid email address when creating an account.
+- **FR-3.** The system MUST require a password that satisfies the application's defined password requirements.
+- **FR-4.** The system MUST validate the submitted registration information before creating the account.
+- **FR-5.** The system MUST reject registration when the submitted email address is already associated with an existing account.
+- **FR-6.** The system MUST create a new user record when all required registration information is valid and the email address is not already in use.
+- **FR-7.** The system MUST assign the General User role to newly registered accounts.
+- **FR-8.** The system MUST securely hash the user's password before storing it and MUST NOT store the plaintext password.
+- **FR-9.** The system MUST NOT allow a user to select or assign an elevated role, such as Verified Reviewer, Editorial Reviewer, or Administrator, during registration.
+- **FR-10.** The system MUST provide an appropriate success response when an account is successfully created.
+- **FR-11.** The system MUST provide an appropriate error response when registration fails due to invalid or incomplete information.
+- **FR-12.** The system SHOULD prevent automated or excessive registration attempts through appropriate rate limiting or abuse protections.
 
-- **FR-1.** The system MUST …
-- **FR-2.** The system MUST …
-- **FR-3.** The system SHOULD …
 
 ## 6. Non-Functional Requirements
 
-- **Performance** — p95 latency targets, throughput, payload size limits.
-- **Security** — authn/authz model, threat-model notes, encryption.
-- **Privacy & Compliance** — FERPA / COPPA / GDPR / WCAG / SOC 2 obligations.
-- **Accessibility** — WCAG 2.1 AA conformance for all UI added.
-- **Scalability** — expected load, partitioning strategy.
-- **Reliability** — availability target, failure modes, idempotency.
-- **Observability** — required metrics, log fields, traces, alerts.
+- **Performance** — Registration SHOULD return a response within 1 second under expected application load.
+- **Security** — Passwords MUST be securely hashed before storage.
+- **Privacy & Compliance** — The system MUST only collect necessary information to create and operate a user account.
+- **Accessibility** — The registration interface MUST conform to WCAG 2.1 AA requirements, including keyboard navigation, accessible form lables, sufficient color contrast, and clear error messages.
+- **Scalability** — The registration SHOULD support the expected user fields without requiring changes to database model.
+- **Reliability** — A failed registration attempt MUST NOT create a partial or invalid user account.
+- **Observability** — Registration failures SHOULD be logged with enough information to diagnose problems.
 - **Maintainability** — coding conventions, owned modules.
 - **Internationalization** — strings externalised, tz/locale handled.
 - **Backward compatibility** — migration & deprecation policy.
