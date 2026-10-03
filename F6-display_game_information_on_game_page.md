@@ -172,8 +172,8 @@ Users need a dedicated page where they can view detailed information about a vid
 
 ## 19. References
 
-- Related plans: F4-set_up_game_database_model.md
-- Related plans: F5-browse_and_search_list_of_games.md
-- Related plans: F7-allow_users_to_create_edit_and_delete_their_own_reviews.md
-- Related plans: F8-display_editorial_verified_and_general_user_reviews_separately.md
-- Related plans: F9-calculate_and_display_aggregate_ratings_for_all_user_roles.md
+- Related plans: `F4-set_up_game_database_model.md`
+- Related plans: `F5-browse_and_search_list_of_games.md`
+- Related plans: `F7-allow_users_to_create_edit_and_delete_their_own_reviews.md`
+- Related plans: `F8-display_editorial_verified_and_general_user_reviews_separately.md`
+- Related plans: `F9-calculate_and_display_aggregate_ratings_for_all_user_roles.md`
