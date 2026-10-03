@@ -12,7 +12,7 @@
 | **Markets** | General Web Audience |
 | **Status (today)** | MISSING |
 | **Estimated effort** | S (1w) |
-| **Owner (proposed)** | {team / individual} |
+| **Owner (proposed)** | team |
 | **Depends on** | {list of Feature IDs that must ship first} |
 | **Unblocks** | {list of Feature IDs this enables} |
 
