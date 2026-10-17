@@ -1,5 +1,7 @@
 :root {
 	--charcoal: #1b1919;
+	--slate: #2e2d2d;
+	--smoke: #3d3c3c;
 	--chocolate: #3f221d;
 	--velvet: #6b1010;
 	--brick: #911a1a;
@@ -29,7 +31,7 @@
 }
 
 body {
-	background-color: var(--eggshell);
+	background-color: var(--slate);
 }
 
 .hidden {

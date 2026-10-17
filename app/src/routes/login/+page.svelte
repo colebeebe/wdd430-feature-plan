@@ -1,5 +1,7 @@
 <script>
+	import { supabase } from '#lib/supabaseClient.js';
 	import { resolve } from '$app/paths';
+	import { goto } from '$app/navigation';
 
 	let email = $state('');
 	let password = $state('');
@@ -14,16 +16,10 @@
 
 		loading = true;
 
-		const options = {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json'
-			},
-			body: JSON.stringify({ email, password })
-		};
-
-		const response = await fetch('api/auth/login', options);
-		const data = await response.json();
+		const { error } = await supabase.auth.signInWithPassword({
+			email,
+			password
+		});
 
 		email = '';
 		password = '';
@@ -31,7 +27,11 @@
 			document.activeElement.blur();
 		}
 
-		errorMessage = data.message;
+		if (error) {
+			errorMessage = error.message;
+		} else {
+			await goto(resolve('/'));
+		}
 		loading = false;
 	};
 
