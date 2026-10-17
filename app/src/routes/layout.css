@@ -1,0 +1,28 @@
+:root {
+	--charcoal: #1b1919;
+	--chocolate: #3f221d;
+	--velvet: #6b1010;
+	--brick: #911a1a;
+	--orchid: #833266;
+	--lilac: #a66086;
+	--blush: #da9191;
+	--eggshell: #f3eae0;
+	--creme: #d9c2a7;
+	--sunrays: #d4b954;
+	--amber: #bf7d2c;
+	--pumpkin: #a64e1b;
+	--fern: #6e7349;
+	--olive: #525942;
+	--deepsea: #034353;
+	--lowtide: #68828c;
+	--seafoam: #859ca6;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: var(--eggshell);
+}

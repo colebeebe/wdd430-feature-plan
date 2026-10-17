@@ -1,5 +1,9 @@
 <script>
+	import Header from './Header.svelte';
+	import { page } from '$app/state';
 	import favicon from '#lib/assets/favicon.svg';
+
+	import './layout.css';
 
 	/** @type {{children: import('svelte').Snippet}} */
 	let { children } = $props();
@@ -9,4 +13,12 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-{@render children()}
+{#if page.url.pathname != '/login'}
+	<Header />
+{/if}
+
+<main>
+	{@render children()}
+</main>
+
+<style></style>
