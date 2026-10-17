@@ -14,9 +14,16 @@
 
 		loading = true;
 
-		setTimeout(() => {
-			loading = false;
-		}, 3000);
+		const options = {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify({ email, password })
+		};
+
+		const response = await fetch('api/auth/login', options);
+		const data = await response.json();
 
 		email = '';
 		password = '';
@@ -24,7 +31,8 @@
 			document.activeElement.blur();
 		}
 
-		errorMessage = 'Incorrect username or password.';
+		errorMessage = data.message;
+		loading = false;
 	};
 
 	/**
@@ -53,10 +61,10 @@
 		<p><a href={resolve('/')}>Return</a> without logging in.</p>
 	</div>
 	<div class="right-content">
-		{#if loading}
-			<h2>Logging In...</h2>
-		{:else}
-			<form id="login-form" onsubmit={handleSubmit}>
+		<form id="login-form" onsubmit={handleSubmit}>
+			{#if loading}
+				<h2>Logging In...</h2>
+			{:else}
 				<div class="form-section">
 					<label for="email">Email</label>
 					<input id="email" name="email" type="email" bind:value={email} />
@@ -66,8 +74,8 @@
 					<input id="password" name="password" type="password" bind:value={password} />
 				</div>
 				<button type="submit">Log In</button>
-			</form>
-		{/if}
+			{/if}
+		</form>
 	</div>
 </div>
 
@@ -140,63 +148,74 @@
 			}
 		}
 
-		form {
-			background-color: rgba(255, 255, 255, 0.15);
-			backdrop-filter: blur(5px);
-			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-			padding: 40px;
-			border-radius: 20px;
-			display: flex;
-			flex-direction: column;
-			gap: 20px;
-			margin-left: 30px;
-
-			.form-section {
-				display: flex;
-				flex-direction: column;
-
-				label {
-					color: var(--eggshell);
-					font-weight: bold;
-					font-size: 1.5rem;
-				}
-
-				input {
-					font-size: 1.5rem;
-					color: var(--eggshell);
-					background-color: rgba(255, 255, 255, 0.05);
-					backdrop-filter: blur(5px);
-					border: none;
-					border-radius: 8px;
-					padding: 8px;
-					margin: 5px 0;
-					min-width: 400px;
-
-					&:focus {
-						outline: 3px solid var(--sunrays);
-					}
-				}
+		.right-content {
+			h2 {
+				font-size: 2rem;
+				color: var(--eggshell);
 			}
 
-			button[type='submit'] {
-				padding: 8px;
-				border-radius: 8px;
-				font-size: 1.5rem;
-				font-weight: bold;
-				border: none;
-				background-color: var(--amber);
-				border: 3px solid transparent;
-				cursor: pointer;
-				color: var(--charcoal);
-				transition:
-					background-color 0.5s ease,
-					border 0.5s ease,
-					color 0.5s ease;
+			form {
+				background-color: rgba(255, 255, 255, 0.15);
+				backdrop-filter: blur(5px);
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+				padding: 40px;
+				width: 440px;
+				height: 280px;
+				border-radius: 20px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				gap: 20px;
+				margin-left: 30px;
 
-				&:hover {
-					background-color: transparent;
-					border: 3px solid var(--amber);
-					color: var(--amber);
+				.form-section {
+					display: flex;
+					flex-direction: column;
+					width: 100%;
+
+					label {
+						color: var(--eggshell);
+						font-weight: bold;
+						font-size: 1.5rem;
+					}
+
+					input {
+						font-size: 1.5rem;
+						color: var(--eggshell);
+						background-color: rgba(255, 255, 255, 0.05);
+						backdrop-filter: blur(5px);
+						border: none;
+						border-radius: 8px;
+						padding: 8px;
+						margin: 5px 0;
+
+						&:focus {
+							outline: 3px solid var(--sunrays);
+						}
+					}
+				}
+
+				button[type='submit'] {
+					padding: 8px 80px;
+					border-radius: 8px;
+					font-size: 1.5rem;
+					font-weight: bold;
+					border: none;
+					background-color: var(--amber);
+					border: 3px solid transparent;
+					cursor: pointer;
+					color: var(--charcoal);
+					transition:
+						background-color 0.5s ease,
+						border 0.5s ease,
+						color 0.5s ease;
+
+					&:hover {
+						background-color: transparent;
+						border: 3px solid var(--amber);
+						color: var(--amber);
+					}
 				}
 			}
 		}
