@@ -35,6 +35,7 @@
 		"#lib/*": "./src/lib/*"
 	},
 	"dependencies": {
-		"@supabase/supabase-js": "^2.118.0"
+		"@supabase/supabase-js": "^2.118.0",
+		"@sveltejs/adapter-node": "^6.0.0"
 	}
 }
