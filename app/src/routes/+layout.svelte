@@ -7,6 +7,7 @@
 
 	import './layout.css';
 
+	/** @type {any} */
 	let user = $state(null);
 
 	/** @type {{children: import('svelte').Snippet}} */
@@ -46,4 +47,11 @@
 	{@render children()}
 </main>
 
-<style></style>
+<style>
+	h1 {
+		text-align: center;
+		color: var(--eggshell);
+		font-size: 3rem;
+		margin: 40px 0;
+	}
+</style>

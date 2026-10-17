@@ -33,6 +33,7 @@
 		justify-content: end;
 		padding: 20px;
 		background-color: var(--charcoal);
+		z-index: 100;
 
 		nav {
 			display: flex;

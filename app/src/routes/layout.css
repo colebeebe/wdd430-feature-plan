@@ -21,8 +21,8 @@
 }
 
 ::selection {
-	background-color: var(--orchid);
-	color: var(--eggshell);
+	background-color: var(--creme);
+	color: var(--charcoal);
 }
 
 * {
