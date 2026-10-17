@@ -18,6 +18,11 @@
 	--seafoam: #859ca6;
 }
 
+::selection {
+	background-color: var(--orchid);
+	color: var(--eggshell);
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -25,4 +30,8 @@
 
 body {
 	background-color: var(--eggshell);
+}
+
+.hidden {
+	display: none;
 }

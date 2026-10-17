@@ -1,7 +1,7 @@
 <script>
 	import Header from './Header.svelte';
 	import { page } from '$app/state';
-	import favicon from '#lib/assets/favicon.svg';
+	import favicon from '#lib/assets/favicon.ico';
 
 	import './layout.css';
 
