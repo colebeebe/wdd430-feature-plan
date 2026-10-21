@@ -1,0 +1,83 @@
+<script>
+  document.querySelectorAll<HTMLElement>(".game-card").forEach((card) => {
+    let frame = 0;
+    let pointerX = 0;
+    let pointerY = 0;
+
+    card.addEventListener("pointermove", (event) => {
+      const rect = card.getBoundingClientRect();
+
+      pointerX = (event.clientX - rect.left) / rect.width;
+      pointerY = (event.clientY - rect.top) / rect.height;
+
+      if (frame) return;
+
+      frame = requestAnimationFrame(() => {
+        const rotateY = (pointerX - 0.5) * 20;
+        const rotateX = (0.5 - pointerY) * 20;
+
+        card.style.transform =
+          `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.03, 1.03, 1.03)`;
+
+        frame = 0;
+      });
+    });
+
+    card.addEventListener("pointerleave", () => {
+      if (frame) {
+        cancelAnimationFrame(frame);
+        frame = 0;
+      }
+
+      card.style.transform = "";
+    });
+  });
+</script>
+
+<li class="game-card">
+  <a href="#">
+    <img src="placeholder.webp" />
+    <div class="game-info">
+      <h2>Game Title</h2>
+      <p class="game-dev">Developer | Publisher</p>
+      <p class="release-year">Released: Year</p>
+      <p class="game-genre">Genre</p>
+    </div>
+  </a>
+</li>
+
+<style>
+  .game-card {
+    width: 204px;
+    height: 350px;
+    background: var(--smoke);
+    border: 8px solid var(--amber);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: none;
+    will-change: transform;
+    display: block;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      padding: 15px;
+      color: var(--eggshell);
+      text-decoration: none;
+    }
+
+    .game-info {
+      h2 {
+        text-align: center;
+      }
+    }
+  }
+
+</style>
