@@ -1,6 +1,10 @@
 ---
 import Header from '../components/Header.astro';
 import '../styles/global.css';
+
+const currentPath = Astro.url.pathname;
+
+const showHeader = currentPath !== '/login';
 ---
 
 <!doctype html>
@@ -14,7 +18,7 @@ import '../styles/global.css';
 		<title>Astro Basics</title>
 	</head>
 	<body>
-		<Header />
+		{showHeader && <Header />}
 		<slot />
 	</body>
 </html>
