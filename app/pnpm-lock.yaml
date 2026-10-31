@@ -14,9 +14,6 @@ importers:
       astro:
         specifier: ^7.4.2
         version: 7.4.2(yaml@2.9.1)
-      project:
-        specifier: link:..
-        version: link:..
 
 packages:
 
