@@ -3,7 +3,7 @@
     <nav>
       <RouterLink to="/">Home</RouterLink>
       <RouterLink to="/login">Log In</RouterLink>
-      <RouterLink to="/logout">Log Out</RouterLink>
+      <button>Log Out</button>
     </nav>
   </header>
 </template>
